@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    --matrix-green: #00ff00;
+    --matrix-dark: #001a00;
+    --matrix-light: #ccffcc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--matrix-dark);
+    color: var(--matrix-green);
+    line-height: 1.6;
+}
+
+.matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 26, 0, 0.9), rgba(0, 26, 0, 0.9)),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><text x="0" y="20" fill="%2300ff00" font-size="20">10110101</text><text x="0" y="40" fill="%2300ff00" font-size="20">01001010</text><text x="0" y="60" fill="%2300ff00" font-size="20">11010110</text><text x="0" y="80" fill="%2300ff00" font-size="20">00101001</text><text x="0" y="100" fill="%2300ff00" font-size="20">10110101</text></svg>');
+    z-index: -1;
+}
+
+header {
+    background-color: rgba(0, 26, 0, 0.8);
+    padding: 1rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px var(--matrix-green);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: var(--matrix-light);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--matrix-green);
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: rgba(0, 26, 0, 0.6);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--matrix-green);
+    box-shadow: 0 0 10px var(--matrix-green);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px var(--matrix-green);
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li::before {
+    content: "> ";
+    color: var(--matrix-green);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 26, 0, 0.8);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+body {
+    animation: flicker 2s infinite;
+}
